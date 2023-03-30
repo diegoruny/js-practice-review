@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-counter">
+      <h1>Sould you bet?</h1>
+      <p>Press the cards you're getting and see if you should bet or hold.</p>
+      <span></span>
+      <h2 id="respuesta"></h2>
+      <div id="botonesCartas">
+        <button onclick="countCard(this)">A</button>
+        <button onclick="countCard(this)">2</button>
+        <button onclick="countCard(this)">3</button>
+        <button onclick="countCard(this)">4</button>
+        <button onclick="countCard(this)">5</button>
+        <button onclick="countCard(this)">6</button>
+        <button onclick="countCard(this)">7</button>
+        <button onclick="countCard(this)">8</button>
+        <button onclick="countCard(this)">9</button>
+        <button onclick="countCard(this)">10</button>
+        <button onclick="countCard(this)">J</button>
+        <button onclick="countCard(this)">Q</button>
+        <button onclick="countCard(this)">K</button>
+      </div>
+      <div id="counterContainer">
+        <p id="counter"></p>
+      </div>
+    </div>
+    <div id="calculator-app">
+      <h1>Simple Calculator</h1>
+      <div id="frm1">
+        <label for="first-input">Fist number</label>
+        <input id="first-input" type="number" required />
+        <label for="operator">Operation</label>
+        <select name="operator" id="operator" required>
+          <option value="*">Multiply</option>
+          <option value="/">Divide</option>
+          <option value="+">Add</option>
+          <option value="-">Substract</option>
+        </select>
+        <label for="second-input">Second number</label>
+        <input id="second-input" type="number" required />
+        <button onclick="simpleCalculator()">go</button>
+      </div>
+      <p id="results"></p>
+    </div>
+    <div id="fizz-buzz">
+      <h1>Fizz Buzz</h1>
+      <p>
+        Prints the numbers from 1 to 100. But for multiples of 3, print "Fizz"
+        instead of the number, and for the multiples of 5, print "Buzz". For
+        numbers which are multiples of both 3 and 5, print "FizzBuzz".
+      </p>
+      <p id="print-space"></p>
+      <button id="print-bttn" onclick="printFizzBuzz()">Print!</button>
+    </div>
+    <div id="calculate-factorial">
+      <h1>Calculate the Factorial of a Number</h1>
+      <p>
+        Factorial of a non-negative integer is the multiplication of all
+        positive integers smaller than or equal to n.
+      </p>
+      <label for="factorial-number">Introduce a positive number: </label>
+      <input type="number" name="factorial-number" id="factorial-number" />
+      <button id="factorial-bttn" onclick="factorialOfNumber()">n!</button>
+      <p id="factorial-answer"></p>
+    </div>
+    <div id="filter-array">
+      <h1>Filter an Array of Objects</h1>
+      <p>Filter from a list</p>
+      <label for="filter-selection">Filter By Age: </label>
+      <select name="filter-array-selection" id="select-filter">
+        <option value="18to20">18 to 20</option>
+        <option value="21to30">21 to 30</option>
+        <option value="31to40">31 to 40</option>
+        <option value="41+">41+</option>
+      </select>
+      <button id="filter-array-bttn" onclick="filterArray()">Go</button>
+      <!-- The tag <pre> is for preformat text here im using the JSON string and help to show sligthly more ordered -->
+      <pre id="filter-array-answer"></pre>
+    </div>
+    <div id="change-color-text">
+      <h1>Color Change</h1>
+      <p id="text-to-change">Change the color of this text</p>
+      <button id="change-color-bttn" onclick="changeTextColor()">
+        Change color
+      </button>
+    </div>
+
+    <div id="async-programming">
+      <h1>Chuck Norris Facts Example</h1>
+      <pre id="api-response" style="width: auto"></pre>
+      <button id="api-fetch-bttn" onclick="fetchApi()">Tell me a fact!</button>
+    </div>
+    <div id="destructuring-books">
+      <h1>List of books</h1>
+      <p id="info-books-answer"></p>
+      <button id="get-book-info-bttn" onclick="getBooksList()">Get list</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
